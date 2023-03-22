@@ -9,7 +9,20 @@
 </head>
 
 <body>
+  <script>
+    const person = {
+      name: 'Wes Bos',
+      sayHi() {
+        console.log(this)
+        console.log(`hey ${this.name}`)
+        return `hey ${this.name}`
+      }
+    }
 
+    const jenna = {name: 'Jenna'}
+    const sayHi = person.sayHi.bind(jenna)
+    console.log(sayHi())
+  </script>
 </body>
 
 </html>
